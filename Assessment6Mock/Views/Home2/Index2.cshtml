@@ -1,0 +1,36 @@
+﻿@model List<Employee>
+@{     
+    ViewData["Title"] = "home page";
+
+    var employeeList =
+}
+
+<div class="text-center">
+    <p>ViewData["errMessage"]</p>
+
+</div>
+
+<table>
+    <tr>
+        <th>FirstName</th>
+        <th>Age</th>
+        <th>Salary</th>
+    </tr>
+    @foreach (var m in Model)
+     {
+        <tr>
+            <td>@m.FirstName</td>
+            <td>@m.Age</td>
+            <td>@m.Salary</td>
+        </tr>
+     }
+   </table>
+
+<div></div>
+<form action="/Home/RetirementInfo" method="post">
+    <div class="form-control">
+    <input type="number" name="id" id="id" />
+    <button class"btn btn-primary">Sumbit</button>
+    </div>
+</form>
+
